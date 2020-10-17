@@ -1,14 +1,15 @@
-import { Injectable } from '@angular/core';
-import { Lista } from '../models/lista.model';
+import { Injectable } from "@angular/core";
+import { Lista } from "../models/lista.model";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class DeseosService {
-
   listas: Lista[] = [];
   constructor() {
-    console.log('Servicio inicializado');
-    
-   }
+    const lista1 = new Lista("Capitan america");
+    const lista2 = new Lista("Iron Man");
+
+    this.listas.push(lista1, lista2);
+  }
 }

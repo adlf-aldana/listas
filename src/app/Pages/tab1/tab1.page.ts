@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
-import { DeseosService } from 'src/app/services/deseos.service';
+import { Component } from "@angular/core";
+import { Lista } from "src/app/models/lista.model";
+import { DeseosService } from "src/app/services/deseos.service";
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: "app-tab1",
+  templateUrl: "tab1.page.html",
+  styleUrls: ["tab1.page.scss"],
 })
 export class Tab1Page {
-
-  constructor(private deseosService: DeseosService) {}
-
+  listas: Lista[];
+  constructor(private deseosService: DeseosService) {
+    this.listas = deseosService.listas;
+  }
 }
