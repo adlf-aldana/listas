@@ -50,4 +50,9 @@ export class AgregarPage implements OnInit {
     //retorna todos los items pendientes
     this.deseosService.guardarStorage();
   }
+
+  borrar(i: number) {
+    this.lista.items.splice(i, 1);
+    this.deseosService.guardarStorage();
+  }
 }
