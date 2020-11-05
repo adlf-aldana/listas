@@ -2,7 +2,7 @@
 
 ------------
 
->  Ver demostración: [Lista](https://lista-ionic.netlify.app/tabs/tab1)
+>  Ver demostración: [Lista](https://lista-ionic.netlify.app)
 
 Proyecto de lista de tareas con el uso de localStorage, escrito en **Angular - Ionic**.
 
