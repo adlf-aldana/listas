@@ -12,7 +12,6 @@ export class ListasComponent implements OnInit {
   listas: Lista[];
   @Input() terminada: true;
   constructor(private deseosService: DeseosService, private router: Router) {
-    this.listas = deseosService.listas;
   }
 
   ngOnInit() {}
@@ -24,5 +23,10 @@ export class ListasComponent implements OnInit {
     } else {
       this.router.navigateByUrl(`/tabs/tab1/agregar/${lista.id}`);
     }
+  }
+
+  borrarLista(lista: Lista) {
+    this.deseosService.borrarLista(lista);
+    this.deseosService.guardarStorage();
   }
 }
